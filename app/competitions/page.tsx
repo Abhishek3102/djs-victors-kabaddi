@@ -1,8 +1,7 @@
-
-import dbConnect from '@/lib/db';
-import { Competition } from '@/lib/models';
 import Link from 'next/link';
 import { ArrowLeft, ArrowRight, History, Calendar, MapPin } from 'lucide-react';
+
+export const dynamic = 'force-dynamic';
 
 // Re-implementing fetch here to ensure we get a longer list if needed, 
 // or we could import from actions, but for a full page list we might want more than 5.
