@@ -136,3 +136,17 @@ export async function getMatch(matchId: string) {
         return null;
     }
 }
+
+export async function getRecentCompetitions() {
+    try {
+        await dbConnect();
+        const competitions = await Competition.find({})
+            .sort({ createdAt: -1 })
+            .limit(5)
+            .lean();
+        return JSON.parse(JSON.stringify(competitions));
+    } catch (e) {
+        console.error("Failed to fetch competitions:", e);
+        return [];
+    }
+}
