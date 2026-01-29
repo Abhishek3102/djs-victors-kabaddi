@@ -1,3 +1,5 @@
+import dbConnect from '@/lib/db';
+import { Competition } from '@/lib/models';
 import Link from 'next/link';
 import { ArrowLeft, ArrowRight, History, Calendar, MapPin } from 'lucide-react';
 
